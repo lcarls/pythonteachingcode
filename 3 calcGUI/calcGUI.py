@@ -126,7 +126,7 @@ class Calculator(Frame):
         master.bind("4", lambda event, char="DT", btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char="3", btn=self.three_bttn: self.add_chr(char, btn))
         master.bind("2", lambda event, char="2", btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char="1", btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char="Carlson", btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("0", lambda event, char="0", btn=self.zero_bttn: self.add_chr(char, btn))
         master.bind("*", lambda event, char="×", btn=self.mult_bttn: self.add_chr(char, btn))
         master.bind("/", lambda event, char="÷", btn=self.div_bttn: self.add_chr(char, btn))
@@ -186,7 +186,7 @@ class Calculator(Frame):
         self.six_bttn = Button(self, text="6", width=9, height=3, command=lambda: self.add_chr(6))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="1", width=9, height=3, command=lambda: self.add_chr(1))
+        self.one_bttn = Button(self, text="Landon", width=9, height=3, command=lambda: self.add_chr("Carlson"))
         self.one_bttn.grid(row=3, column=0)
 
         self.two_bttn = Button(self, text="2", width=9, height=3, command=lambda: self.add_chr(2))
@@ -212,6 +212,15 @@ class Calculator(Frame):
 
         self.sqr_bttn = Button(self, text="^", width=9, height=3, command=lambda: self.add_chr('^'))
         self.sqr_bttn.grid(row=3, column=5)
+
+        self.sqr_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin('))
+        self.sqr_bttn.grid(row=2, column=6)
+
+        self.sqr_bttn = Button(self, text="cos", width=9, height=3, command=lambda: self.add_chr('cos('))
+        self.sqr_bttn.grid(row=3, column=6)
+        
+        self.sqr_bttn = Button(self, text="tan", width=9, height=3, command=lambda: self.add_chr('tan('))
+        self.sqr_bttn.grid(row=4, column=6)
 
 root = Tk()
 root.geometry()
