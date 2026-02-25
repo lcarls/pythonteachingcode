@@ -1,5 +1,5 @@
 from tkinter import *
-from math import sqrt as sqr
+from math import sqrt as sqr, sin, cos, tan
 
 
 class Calculator(Frame):
@@ -74,6 +74,9 @@ class Calculator(Frame):
         e = e.replace("²", "**2")
         e = e.replace("^", "**")
         e = e.replace("÷", "/")
+        e = e.replace("sin(", "sin(")
+        e = e.replace("cos(", "cos(")
+        e = e.replace("tan(", "tan(")
 
         try:
             ans = eval(e)
@@ -213,14 +216,14 @@ class Calculator(Frame):
         self.sqr_bttn = Button(self, text="^", width=9, height=3, command=lambda: self.add_chr('^'))
         self.sqr_bttn.grid(row=3, column=5)
 
-        self.sqr_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin('))
-        self.sqr_bttn.grid(row=2, column=6)
+        self.sin_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin('))
+        self.sin_bttn.grid(row=2, column=6)
 
-        self.sqr_bttn = Button(self, text="cos", width=9, height=3, command=lambda: self.add_chr('cos('))
-        self.sqr_bttn.grid(row=3, column=6)
+        self.cos_bttn = Button(self, text="cos", width=9, height=3, command=lambda: self.add_chr('cos('))
+        self.cos_bttn.grid(row=3, column=6)
         
-        self.sqr_bttn = Button(self, text="tan", width=9, height=3, command=lambda: self.add_chr('tan('))
-        self.sqr_bttn.grid(row=4, column=6)
+        self.tan_bttn = Button(self, text="tan", width=9, height=3, command=lambda: self.add_chr('tan('))
+        self.tan_bttn.grid(row=4, column=6)
 
 root = Tk()
 root.geometry()
