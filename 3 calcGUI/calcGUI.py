@@ -1,5 +1,6 @@
 from tkinter import *
-from math import sqrt as sqr, sin, cos, tan
+from math import sqrt as sqr
+from math import sin, cos, tan
 
 
 class Calculator(Frame):
